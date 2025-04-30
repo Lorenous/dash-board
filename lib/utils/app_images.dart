@@ -27,6 +27,10 @@ abstract class AppImages {
   /// assets/images/Frame2.svg
   static const String frame2 = "assets/images/Frame2.svg";
 
+  /// Assets for imagesFrame3
+  /// assets/images/Frame3.svg
+  static const String frame3 = "assets/images/Frame3.svg";
+
   /// Assets for imagesGallery
   /// assets/images/gallery.svg
   static const String gallery = "assets/images/gallery.svg";
