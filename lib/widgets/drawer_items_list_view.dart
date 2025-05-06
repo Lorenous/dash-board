@@ -24,8 +24,7 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
   int activeIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-        shrinkWrap: true,
+    return SliverList.separated(
         itemBuilder: (context, index) => GestureDetector(
               onTap: () {
                 if (activeIndex != index) {
