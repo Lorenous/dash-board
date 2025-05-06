@@ -12,13 +12,15 @@ class DashboardDisktopLayoutWidget extends StatelessWidget {
         Expanded(
           child: CustomDrawer(),
         ),
-        SizedBox(width: 32),
         Expanded(
           flex: 2,
-          child: Column(
-            children: [
-              AllExpenses(),
-            ],
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 32, vertical: 42),
+            child: Column(
+              children: [
+                AllExpenses(),
+              ],
+            ),
           ),
         ),
       ],

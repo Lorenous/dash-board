@@ -19,6 +19,7 @@ class AllExpensesItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AllExpensesItemHeader(
             image: allExpensesItemModel.image,
@@ -28,6 +29,7 @@ class AllExpensesItem extends StatelessWidget {
             allExpensesItemModel.title,
             style: AppStyles.styleSemiBold16,
           ),
+          const SizedBox(height: 8),
           Text(
             allExpensesItemModel.date,
             style: AppStyles.styleRegular14,
