@@ -21,7 +21,7 @@ class AllExpensesItemHeader extends StatelessWidget {
           backgroundColor: imageBackgroundColor,
           child: SvgPicture.asset(
             image,
-            color: imageColor,
+            colorFilter: ColorFilter.mode(imageColor, BlendMode.srcIn),
           ),
         ),
         const Spacer(),
