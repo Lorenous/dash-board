@@ -5,10 +5,28 @@ import 'package:flutter_svg/svg.dart';
 
 class DrawerItem extends StatelessWidget {
   final DrawerItemModel drawerItemModel;
+  final bool isActive;
   const DrawerItem({
     super.key,
     required this.drawerItemModel,
+    required this.isActive,
   });
+
+  @override
+  Widget build(BuildContext context) {
+    return isActive
+        ? ActiveItem(drawerItemModel: drawerItemModel)
+        : InActiveItem(drawerItemModel: drawerItemModel);
+  }
+}
+
+class InActiveItem extends StatelessWidget {
+  const InActiveItem({
+    super.key,
+    required this.drawerItemModel,
+  });
+
+  final DrawerItemModel drawerItemModel;
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +35,30 @@ class DrawerItem extends StatelessWidget {
       title: Text(
         drawerItemModel.title,
         style: AppStyles.styleRegular16,
+      ),
+    );
+  }
+}
+
+class ActiveItem extends StatelessWidget {
+  const ActiveItem({
+    super.key,
+    required this.drawerItemModel,
+  });
+
+  final DrawerItemModel drawerItemModel;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: SvgPicture.asset(drawerItemModel.image),
+      title: Text(
+        drawerItemModel.title,
+        style: AppStyles.styleBold16,
+      ),
+      trailing: const VerticalDivider(
+        color: Color(0xff4EB7F2),
+        thickness: 3,
       ),
     );
   }
