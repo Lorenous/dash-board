@@ -11,7 +11,6 @@ class DashboardDisktopLayoutWidget extends StatelessWidget {
         Expanded(
           child: CustomDrawer(),
         ),
-        SizedBox(height: 8),
       ],
     );
   }
