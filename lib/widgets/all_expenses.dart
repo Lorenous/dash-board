@@ -1,4 +1,7 @@
+import 'package:dash_board/models/all_expenses_item_model.dart';
+import 'package:dash_board/utils/app_images.dart';
 import 'package:dash_board/widgets/all_expenses_header.dart';
+import 'package:dash_board/widgets/all_expenses_item.dart';
 import 'package:flutter/material.dart';
 
 class AllExpenses extends StatelessWidget {
@@ -15,6 +18,15 @@ class AllExpenses extends StatelessWidget {
       child: const Column(
         children: [
           AllExpensesHeader(),
+          SizedBox(height: 16),
+          AllExpensesItem(
+            allExpensesItemModel: AllExpensesItemModel(
+              image: AppImages.cardReceive,
+              title: 'Income',
+              date: 'April 2022',
+              price: '\$20,129',
+            ),
+          ),
         ],
       ),
     );

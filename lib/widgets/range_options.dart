@@ -29,7 +29,7 @@ class RangeOptions extends StatelessWidget {
             child: const Icon(
               Icons.arrow_back_ios_new,
               color: Color(0xff064060),
-              size: 16,
+              size: 20,
             ),
           ),
         ],
