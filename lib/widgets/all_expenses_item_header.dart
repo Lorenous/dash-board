@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class AllExpensesItemHeader extends StatelessWidget {
+  final Color imageBackgroundColor, iconColor, imageColor;
   final String image;
-  const AllExpensesItemHeader({super.key, required this.image});
+  const AllExpensesItemHeader({
+    super.key,
+    required this.image,
+    required this.imageBackgroundColor,
+    required this.iconColor,
+    required this.imageColor,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -11,13 +18,16 @@ class AllExpensesItemHeader extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 30,
-          backgroundColor: const Color(0xffFAFAFA),
-          child: SvgPicture.asset(image),
+          backgroundColor: imageBackgroundColor,
+          child: SvgPicture.asset(
+            image,
+            color: imageColor,
+          ),
         ),
         const Spacer(),
-        const Icon(
+        Icon(
           Icons.arrow_forward_ios,
-          color: Color(0xff064060),
+          color: iconColor,
           size: 24,
         ),
       ],
