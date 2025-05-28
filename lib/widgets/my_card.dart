@@ -1,5 +1,6 @@
-import 'package:dash_board/utils/app_images.dart';
 import 'package:dash_board/utils/app_styles.dart';
+import 'package:dash_board/widgets/card_indicator.dart';
+import 'package:dash_board/widgets/custom_card.dart';
 import 'package:flutter/material.dart';
 
 class MyCard extends StatelessWidget {
@@ -7,26 +8,17 @@ class MyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+        Text(
           'My Card',
           style: AppStyles.styleSemiBold20,
         ),
-        const SizedBox(height: 20),
-        AspectRatio(
-          aspectRatio: 420 / 215,
-          child: Container(
-            decoration: BoxDecoration(
-              color: const Color(0xff4EB7F2),
-              borderRadius: BorderRadius.circular(16),
-              image: const DecorationImage(
-                image: AssetImage(AppImages.maskGroup),
-              ),
-            ),
-          ),
-        ),
+        SizedBox(height: 20),
+        CustomCard(),
+        SizedBox(height: 19),
+        CardIndicator()
       ],
     );
   }
