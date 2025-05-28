@@ -1,4 +1,7 @@
-abstract class AppImages {
+// ignore_for_file: prefer_single_quotes
+class AppImages {
+  AppImages._();
+
   /// Assets for imagesCardReceive
   /// assets/images/card-receive.svg
   static const String cardReceive = "assets/images/card-receive.svg";
@@ -44,8 +47,8 @@ abstract class AppImages {
   static const String logout = "assets/images/logout.svg";
 
   /// Assets for imagesMask group
-  /// assets/images/Mask group.svg
-  static const String maskGroup = "assets/images/Mask group.svg";
+  /// assets/images/Mask group.png
+  static const String maskGroup = "assets/images/maskGroup.png";
 
   /// Assets for imagesMoneys
   /// assets/images/moneys.svg

@@ -12,6 +12,7 @@ class DashboardDisktopLayoutWidget extends StatelessWidget {
     return const Row(
       children: [
         Expanded(
+          flex: 1,
           child: CustomDrawer(),
         ),
         Expanded(
